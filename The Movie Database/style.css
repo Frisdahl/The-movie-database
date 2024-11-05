@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --color-TextPrimary: #fff0ef;
+
+  --colorPrimary: #9a001e;
+  --colorSecondary: #5e0c3f;
+
+  --colorHeaderFooter: #321123;
+
+  --fontMain: "roboto", Arial, Helvetica, sans-serif;
+
+  --paragrah: 1.25em;
+
+  --smallMargin: 10%;
+  --smallPadding: 0.5em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fontMain);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: var(--colorHeaderFooter);
+  color: var(--color-TextPrimary);
+}
+
+h1 {
+  padding-left: 5%;
+}
+
+nav {
+  background-color: var(--colorPrimary);
+  font-size: var(--paragrah);
+  padding: var(--smallPadding);
+}
+
+nav ul {
+  padding-left: 5%;
+  list-style-type: none;
+  width: 45vw;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-TextPrimary);
+}
+
+.active {
+  color: #ecac6f;
+  text-decoration: underline;
+}
+
+.movie-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+
+header .movie-title {
+  padding: var(--smallPadding);
+  font-weight: 500;
+}
+
+.movie {
+  border-radius: 10px;
+  border: 2px solid var(--colorSecondary);
+}
+
+.movie-heading {
+  color: #fff4ff;
+  font-size: 2em;
+  background-color: var(--colorSecondary);
+}
+
+.movie-img {
+  max-width: 250px;
+  height: 100%; /* or any fixed height you want */
+}
+
+.movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fills container, might crop the image */
+}
+
+.movie-description {
+  margin: 2%;
+  font-size: var(--paragrah);
+}
+
+.movie-description > * {
+  margin-top: 15px;
+}
+
+.showMovies {
+  margin: 2.5% 5% 2.5% 5%;
+  display: grid;
+  grid-row-gap: 2vh;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background-color: var(--colorHeaderFooter);
+  color: var(--color-TextPrimary);
+  font-size: var(--paragrah);
+}
+
+/* Media query for screen sizes below 768px */
+@media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 3.25em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .movie-content {
+    display: grid;
+    grid-template-columns: 250px auto;
+  }
+
+  /* You can add more layout or typography changes here */
+}
